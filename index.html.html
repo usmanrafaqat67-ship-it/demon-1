@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SecureLAN - Usman Rafaqat</title>
+
+<style>
+    /* BOOT SCREEN */
+    #boot {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: black;
+        color: #00ffcc;
+        font-family: monospace;
+        padding: 20px;
+        z-index: 9999;
+    }
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0a0f1c;
+        color: white;
+    }
+
+    /* NAV */
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 40px;
+        background: #0d1328;
+        box-shadow: 0 0 25px #00f0ff40;
+    }
+
+    /* LOGO */
+    .logo svg {
+        animation: rotate 5s linear infinite;
+        filter: drop-shadow(0 0 10px #00f0ff);
+    }
+
+    @keyframes rotate {
+        100% { transform: rotate(360deg); }
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background: #0d1326;
+        box-shadow: 0 0 20px rgba(0,255,255,0.2);
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .logo svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        color: #00ffff;
+        margin-top: 5px;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .name {
+        font-size: 16px;
+        opacity: 0.8;
+        color: #00ffff;
+        float: right;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        background: linear-gradient(90deg, #00ffff, #0000ff);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    .hero p {
+        opacity: 0.8;
+    }
+
+    .hero ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+    .hero ul li {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .section {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .terminal {
+        width: 30%;
+        height: auto;
+        margin: auto;
+        background: black;
+        padding: 20px;
+        border-radius: 10px;
+        color: #00ffcc;
+        font-family: monospace;
+        box-shadow: 0 0 20px #00ffcc;
+    }
+
+    .terminal .class {
+        margin-top: 20px;
+        color: #00ffcc;
+    }
+
+    .card {
+        background: #111a33;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 15px;
+        max-width: 500px;
+        box-shadow: 0 0 15px rgba(0,255,255,0.1);
+    }
+
+    /* LIGHTNING BORDER */
+    .card:hover {
+        animation: lightning 0.3s infinite alternate;
+    }
+
+    @keyframes lightning {
+        0% { box-shadow: 0 0 10px #00f0ff; }
+        100% { box-shadow: 0 0 30px #00f0ff, 0 0 60px #00f0ff; }
+    }
+
+    .card h3 {
+        margin-bottom: 10px;
+        color: cyan;
+    }
+
+    .card p {
+        opacity: 0.8;
+    }
+
+    .card ul {
+        text-align: left;
+        margin-top: 10px;
+        padding-left: 20px;
+    }
+
+    .card ul li {
+        margin-bottom: 5px;
+    }
+
+    .profile {
+        text-align: center;
+        padding: 50px;
+    }
+
+    .profile img {
+        width: 300px;
+        height: 400px;
+        border-radius: 50%;
+        border: 3px solid cyan;
+        transition: 1s;
+    }
+
+    .profile img:hover {
+        border-radius: 50%;
+        border: 3px solid #00f0ff;
+        box-shadow: 0 0 25px #00f0ff;
+    }
+
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #0d1326;
+        opacity: 0.7;
+    }
+
+</style>
+</head>
+
+<body>
+            <!-- BOOT SCREEN -->
+    <div id="boot">
+        <pre id="bootText">
+            Initializing SecureLAN...
+            Loading security modules...
+            Connecting to LAN...
+            Scanning devices...
+            System Ready ✔
+        </pre>
+    </div>
+
+
+</nav>
+    <header>
+            <!-- NAV -->
+        <nav>
+            <div class="logo">
+                <!-- Shield Logo -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="cyan" stroke-width="2">
+                    <path d="M12 2L4 6V12C4 17 8 21 12 22C16 21 20 17 20 12V6L12 2Z" />
+                </svg>
+                SecureLAN
+            </div>
+            <center>
+                <p class="subtitle">Smart LAN Security for Windows</p>
+            </center>
+            <div class="name">By Usman Rafaqat</div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>SecureLAN Cyber Defense System</h1>
+        <p>Smart LAN Security for Windows</p>
+        <p>Protect your network from unauthorized access and malicious devices.</p>
+        <ul>
+            <li>Real-time device monitoring</li>
+            <li>Instant alerts for suspicious activity</li>
+            <li>Comprehensive network reports</li>
+            <li>Customizable security settings</li>
+            <li>Integration with existing network tools</li>
+            <li>Support for multiple notification channels</li>
+            <li>Easy-to-use interface</li>
+            <li>Regular updates with new features</li>
+            <li>24/7 customer support</li>
+            <li>Available on Windows 10 and 11</li>
+        </ul>
+    </section>
+
+    <!-- TERMINAL -->
+    <div class="terminal" id="terminal">
+        <!-- Terminal output will be generated here -->
+         <h2>Terminal</h2>
+         <p class="subtitle">Simulated Terminal Output:</p>
+         <ul>
+            <li>Scanning network...</li>
+            <li>Device detected: [Device Name]</li>
+            <li>Warning: Unknown device!</li>
+            <li>Blocking threat...</li>
+            <li>Network secured ✔</li>
+         </ul>
+         <ul class="class">
+            <li>Generating report...</li>
+            <li>Report generated: [Report Name]</li>
+            <li>Sending alert to email...</li>
+            <li>Alert sent successfully ✔</li>
+         </ul>
+    </div>
+
+    <section class="section">
+        <div class="card">
+            <h3>🔐 Secure Network</h3>
+            <p>Real-time protection from unknown devices.</p>
+            <p>Available on Windows 10 and 11.</p>
+            <ul>
+                <li>Protect against unauthorized access.</li>
+                <li>Block malicious devices from the network.</li>
+                <li>Generate detailed reports for network analysis.</li>
+                <li>Customizable alert settings for different types of activity.</li>
+                <li>Integration with existing network management tools.</li>
+                <li>Support for multiple notification channels (email, SMS, push notifications).</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>📡 Live Scanning</h3>
+            <p>Instant detection of all connected devices.</p>
+            <p>Available on Windows 10 and 11.</p>
+            <ul>
+                <li>Identify device types and manufacturers.</li>
+                <li>Monitor network activity in real-time.</li>
+                <li>Generate detailed reports for network analysis.</li>
+                <li>Customizable alert settings for different types of activity.</li>
+                <li>Integration with existing network management tools.</li>
+                <li>Support for multiple notification channels (email, SMS, push notifications).</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>🚨 Smart Alerts</h3>
+            <p>Get notified of any suspicious activity.</p>
+            <p>Available on Windows 10 and 11.</p>
+            <ul>
+                <li>Receive instant notifications for unauthorized access attempts.</li>
+                <li>Customizable alert settings for different types of activity.</li>
+                <li>Integration with existing network management tools.</li>
+                <li>Support for multiple notification channels (email, SMS, push notifications).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="profile">
+        <h2>About the Developer</h2>
+        <p>Usman Rafaqat is a passionate developer with expertise in creating secure and efficient network solutions.</p>
+        <img src="image/ChatGPT Image Apr 9, 2026, 10_44_20 AM.png" alt="Usman Rafaqat">
+    </section>
+
+    <footer>
+        © 2026 SecureLAN | Created by Usman Rafaqat
+    </footer>
+
+    <!-- SOUND -->
+    <audio id="sound" src="https://www.soundjay.com/buttons/beep-07.wav"></audio>
+
+    <script>
+
+        /* BOOT TEXT */
+        const bootLines = [
+        "Initializing SecureLAN...",
+        "Loading security modules...",
+        "Connecting to LAN...",
+        "Scanning devices...",
+        "System Ready ✔"
+        ];
+
+        let i = 0;
+        function bootSequence(){
+            if(i < bootLines.length){
+                document.getElementById("bootText").innerHTML += bootLines[i] + "\\n";
+                i++;
+                setTimeout(bootSequence, 500);
+            } else {
+                document.getElementById("boot").style.display = "none";
+                document.getElementById("sound").play();
+                startTerminal();
+            }
+        }
+        bootSequence();
+
+        /* TERMINAL TYPING */
+        const terminalLines = [
+        "> Scanning network...",
+        "> Device detected: 192.168.0.1",
+        "> Device detected: 192.168.0.5",
+        "> Warning: Unknown device!",
+        "> Blocking threat...",
+        "> Network secured ✔"
+        ];
+
+        let j = 0;
+        function startTerminal(){
+            let term = document.getElementById("terminal");
+
+            function type(){
+                if(j < terminalLines.length){
+                    term.innerHTML += terminalLines[j] + "<br>";
+                    j++;
+                    setTimeout(type, 700);
+                }
+            }
+            type();
+        }
+
+    </script>
+</body>
+</html>
